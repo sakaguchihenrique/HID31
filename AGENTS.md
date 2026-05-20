@@ -1,21 +1,21 @@
 # AGENTS.md
 
 ## Project Overview
-- **Project:** Análise Estrutural I Learning Workspace
-- **Purpose:** Help me learn Análise Estrutural I (EDI-31) from Instituto Tecnologico de Aeronautica using PDFs, slides, documents, exercises, notes, diagrams, and review materials.
+- **Project:** Transport Phenomena Learning Workspace
+- **Purpose:** Help me learn HID-31 Transport Phenomena from Instituto Tecnologico de Aeronautica using PDFs, slides, documents, exercises, notes, diagrams, and review materials.
 - **Target user:** Me, a student using this directory as a personal learning workspace.
 - **My skill level:** Student. Explain ideas clearly and do not assume expert knowledge.
 - **Language:** Use English for project files.
 - **Stack:** This is mainly a learning and documentation project. Use Markdown files unless another format is requested.
 
 ## Class Context
-- **Main source:** `materials/Capa.pdf`.
-- **Course:** Análise Estrutural I.
-- **Code:** EDI-31.
+- **Main source:** `materials/ementa_HID31.jpeg`.
+- **Course:** Fenômenos de Transporte.
+- **Code:** HID-31.
 - **Period:** 1st Civil Engineering year, 1st period, 2026.
-- **Professor:** Eliseu Lucena Neto.
-- **Course emphasis:** Focus on the "why" of structural analysis, not only the "how".
-- **Main topics:** Fundamental concepts, Euler-Bernoulli and Timoshenko beam theory, isostatic structures, variational calculus, and the principle of virtual displacements.
+- **Professor:** Not specified in the syllabus image.
+- **Course emphasis:** Focus on the fundamental physics of fluid flow, heat transfer, and mass transfer.
+- **Main topics:** Gas mixtures, fluid properties, viscosity, surface and body forces, fluid statics, Euler/Lagrange flow description, conservation of mass/momentum/energy, Bernoulli equation, incompressible viscous flow, Navier-Stokes equations, dimensional analysis, Buckingham Pi theorem, experimental fluid mechanics, and heat transfer by conduction, convection, and radiation.
 - **Assessment context:** Oral exam, written exam, and laboratory work are important parts of the course.
 
 ## Commands

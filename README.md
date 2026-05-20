@@ -1,8 +1,8 @@
-# Infrastructure Engineering Learning Workspace
+# Transport Phenomena Learning Workspace
 
-This project is a personal learning workspace for Infrastructure Engineering topics from Instituto Tecnologico de Aeronautica.
+This project is a personal learning workspace for the HID-31 Transport Phenomena class at Instituto Tecnologico de Aeronautica.
 
-The goal is to use teacher materials, such as PDFs, slides, documents, images, and exercises, to learn topics and create review materials for later.
+The goal is to use teacher materials, such as PDFs, slides, documents, images, and exercises, to learn transport phenomena topics and create review materials for later.
 
 ## How To Use This Project
 
