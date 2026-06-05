@@ -34,7 +34,11 @@
 \newcolumntype{Z}{>{\centering\arraybackslash}X}
 
 \title{Relatorio 2: A Mini Central Termeletrica}
-\author{\todo{Seu nome}\\\todo{Integrantes do grupo}}
+\author{
+Felipe Bisca \\
+Henrique Sakaguchi \\
+Willgner Damas
+}
 \date{HID-31: Fenomenos de Transporte\\\today}
 
 \begin{document}
@@ -49,11 +53,12 @@
   {\Large A Mini Central Termeletrica\par}
   \vspace{2cm}
   {\large HID-31: Fenomenos de Transporte\par}
-  {\large Data do laboratorio: \todo{dia mes 2026}\par}
+  {\large Data do laboratorio: 07 de Maio}
   \vfill
   {\large Alunos:\par}
-  \todo{Seu nome}\\
-  \todo{Integrantes do grupo}
+   Felipe Bisca \\
+    Henrique Sakaguchi \\
+    Willgner Damas
   \vfill
   {\large Sao Jose dos Campos, \today\par}
 \end{titlepage}
@@ -61,15 +66,18 @@
 \tableofcontents
 \newpage
 
-\section{Introducao}
+\section{Introdução}
 
-Este relatorio estuda a operacao de uma mini central termeletrica composta por um gerador de vapor, uma turbina e um gerador eletrico conectado a cargas eletricas. O experimento mede tensao e corrente para diferentes ajustes de carga e pressoes de vapor. A potencia eletrica e calculada por \(P = VI\), e os resultados sao usados para analisar como a carga e a pressao afetam o desempenho do gerador.
+A geração de energia termelétrica e hidrelétrica constitui a base estrutural das matrizes energéticas globais. A compreensão prática das etapas de conversão de energia, desde a liberação de calor na combustão até a geração de potência elétrica, é essencial para a análise e otimização de máquinas de fluxo.
+​Este relatório detalha as atividades desenvolvidas no experimento da Mini Central Termelétrica, conduzido no âmbito da disciplina de laboratório. A prática foi dividida em duas frentes principais de análise de conversão energética. A primeira concentrou se na operação de uma bancada termelétrica composta por um gerador de vapor, uma turbina e um gerador elétrico, avaliando o comportamento do sistema sob diferentes configurações de carga resistiva.
+​A segunda frente dedicou se ao estudo do escoamento e da potência útil em uma turbina de impulsão do tipo Pelton. Através da aplicação de um freio mecânico, buscou se mensurar o torque e a velocidade de rotação do eixo para determinar a potência mecânica efetiva do sistema. A execução combinada desses ensaios permite observar o comportamento dinâmico dos equipamentos sob regimes de operação variados e documentar a eficiência global do processo de geração de potência.
 
-\todo{Depois de completar o laboratorio, substitua este paragrafo por um resumo curto dos principais resultados numericos e conclusoes.}
+
+
 
 \section{Objetivo}
 
-O objetivo desta atividade de laboratorio e observar a operacao de um pequeno sistema de geracao termeletrica e medir como a tensao, a corrente e a potencia eletrica variam com a carga e com a pressao de vapor.
+​O objetivo deste trabalho é analisar o princípio de funcionamento e o desempenho operacional de uma Mini Central Termelétrica a vapor em escala de bancada. Busca-se compreender as transformações energéticas envolvidas no ciclo termodinâmico — desde a conversão de energia química do combustível em térmica na caldeira, passando pela conversão em energia mecânica na turbina, até a geração final de energia elétrica. Adicionalmente, visa-se estudar os métodos analíticos e experimentais de quantificação de potência útil e eficiência em turbinas de impulsão do tipo Pelton.
 
 \section{Montagem Experimental}
 
@@ -77,57 +85,94 @@ A mini central possui tres subsistemas principais:
 
 \begin{itemize}
   \item \textbf{Gerador de vapor:} queimador, caldeira, indicador de nivel da agua, valvula de seguranca e manometro da caldeira.
+
+    \begin{figure}[H]
+  \centering
+  \includegraphics[angle=-90,width=0.65\textwidth]{20260507_154152.jpg}
+  \caption{Imagem da Caldeira.}
+  \label{fig:setup}
+\end{figure}
+  
   \item \textbf{Turbina:} entrada de vapor, rotor da turbina e exaustao do condensado.
+
+  \begin{figure}[H]
+  \centering
+  \includegraphics[angle=-90,width=0.65\textwidth]{20260507_154149.jpg}
+  \caption{Imagem da Turbina.}
+  \label{fig:setup}
+\end{figure}
+
   \item \textbf{Gerador eletrico e sistema de cargas:} gerador, banco de lampadas, reostato, voltimetro, amperimetro e controles de carga.
 \end{itemize}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[angle=-90,width=0.65\textwidth]{20260507_154152.jpg}
-  \caption{Mini central termeletrica usada no experimento.}
+  \includegraphics[angle=-90,width=0.65\textwidth]{20260507_155449.jpg}
+  \caption{Imagem do painel do gerador elétrico.}
   \label{fig:setup}
 \end{figure}
 
+
+
 \section{Teoria}
 
-A potencia eletrica de saida e calculada a partir da tensao e da corrente medidas:
-
+\subsection{Conversão de Energia no Ciclo Termelétrico}
+O princípio operacional de uma central termelétrica fundamenta-se na conversão sucessiva de energia térmica em trabalho mecânico e, posteriormente, em energia elétrica. No gerador de vapor (caldeira), ocorre a adição de calor ao fluido de trabalho sob alta pressão, convertendo a água líquida em vapor superaquecido. Esse fluido expande-se na turbina, exercendo força sobre as palhetas do rotor e realizando trabalho de eixo. A potência elétrica de saída ($P$) dissipada na carga conectada ao gerador elétrico é governada pela relação:
 \begin{equation}
-  P = VI,
-  \label{eq:power}
+    P = V \cdot I
+\end{equation}
+em que $V$ representa a tensão elétrica e $I$ denota a corrente elétrica circulante no circuito.
+
+\subsection{Dinâmica do Jato na Turbina de Impulsão (Pelton)}
+A turbina Pelton opera como uma máquina de impulsão, onde a conversão da energia de pressão do fluido em energia cinética ocorre integralmente antes do contato com o rotor, através de um bico injetor. Aplicando-se a equação de Bernoulli entre a seção de entrada ($in$) e a de saída ($out$) do injetor sob regime permanente, tem-se:
+\begin{equation}
+    \frac{p_{in}}{\rho} + \frac{U_{in}^{2}}{2} = \frac{p_{out}}{\rho} + \frac{U_{out}^{2}}{2}
+\end{equation}
+Considerando a pressão de saída igual à atmosférica ($p_{out} = 0$ manométrica) e adotando as simplificações de que a pressão interna na caldeira é substancialmente superior à externa ($p_{in} \gg p_{out}$) e que a velocidade do jato na saída supera amplamente a de aproximação ($U_{out} \gg U_{in}$), a expressão reduz-se a:
+\begin{equation}
+    \frac{p_{in}}{\rho} = \frac{U_{out}^{2}}{2}
 \end{equation}
 
-em que \(P\) e a potencia eletrica em watts (\si{\watt}), \(V\) e a tensao em volts (\si{\volt}) e \(I\) e a corrente em amperes (\si{\ampere}).
-
-Para uma carga resistiva, a lei de Ohm fornece
-
+Isolando-se a velocidade de saída do jato ($U_{out}$), obtém-se:
 \begin{equation}
-  V = RI.
-  \label{eq:ohm}
+    U_{out} = \sqrt{\frac{2p_{in}}{\rho}}
 \end{equation}
 
-Combinando as Equacoes~\ref{eq:power} e~\ref{eq:ohm}, a potencia tambem pode ser escrita como
-
+A energia cinética específica do jato é definida por $E = \frac{U_{out}^{2}}{2}$. Consequentemente, a potência hidráulica total disponível ($P_{disp}$) transportada pelo fluido pode ser expressa em função da vazão mássica $\dot{m}$ ou da vazão volumétrica $Q$, utilizando a relação $\dot{m} = \rho Q$:
 \begin{equation}
-  P = \frac{V^2}{R} = I^2R.
-  \label{eq:resistive-power}
+    P_{disp} = \dot{m}\frac{U_{out}^{2}}{2} = \frac{\rho Q U_{out}^{2}}{2}
 \end{equation}
 
-Essa relacao ajuda a explicar o experimento com as lampadas: ao mudar a resistencia equivalente, muda-se a corrente exigida do gerador. Se o gerador nao consegue manter a mesma tensao sob maior carga, a tensao terminal pode diminuir.
+\subsection{Medição de Potência de Eixo via Dinamômetro de Prony}
+A potência mecânica efetivamente transmitida pelo eixo da turbina ($P_e$) difere da potência disponível devido a perdas por atrito nos mancais, choques mecânicos e dissipação hidráulica. Para a determinação experimental direta desta grandeza, emprega-se o dinamômetro de Prony, cujo princípio operacional baseia-se na aplicação de um freio mecânico periférico ao eixo rotativo.
+
+Durante o ensaio, o torque de atrito equilibra-se com o momento mecânico externo ($M_e$) exercido por uma barra rígida de comprimento $L$ conectada ao freio, que transmite uma força vertical $F$ mensurável em uma balança:
+\begin{equation}
+    M_e = F \cdot L
+\end{equation}
+
+O trabalho realizado por rotação completa do eixo contra o acoplamento do freio equivale a $W = 2\pi FL$. Para um eixo operando a uma velocidade angular de $n$ rotações por minuto (rpm), expressando a força $F$ em quilogramas-força (kgf), a potência mecânica útil de eixo ($P_e$), em Watts, é formalizada por:
+\begin{equation}
+    P_e = \frac{2\pi \cdot F \cdot g_c \cdot L \cdot n}{60}
+\end{equation}
+onde $g_c$ denota a aceleração da gravidade local atuando como fator de conversão de unidades. 
+
+Por fim, o rendimento global ou eficiência fluído-mecânica ($\eta$) da turbina é estabelecido pela razão adimensional entre a potência útil convertida no eixo e a potência originalmente disponível no jato de fluido:
+\begin{equation}
+    \eta = \frac{P_e}{P_{disp}}
+\end{equation}
 
 \section{Procedimento}
 
 \subsection{Experimento I: Banco de Lampadas}
 
-Inicialmente, o gerador de vapor foi colocado em funcionamento para produzir o vapor necessario ao acionamento da turbina. Apos a estabilizacao inicial do sistema, a turbina foi acionada e passou a converter parte da energia do vapor em movimento de rotacao.
+Inicialmente, o gerador de vapor foi colocado em funcionamento para produzir o vapor necessario ao acionamento da turbina. Apos a estabilização inicial do sistema, a turbina foi acionada e passou a converter parte da energia do vapor em movimento de rotação.
 
-Com a turbina em movimento, o gerador eletrico foi conectado ao banco de lampadas. Em seguida, as chaves das lampadas foram acionadas gradualmente. A cada nova lampada conectada, observou-se a mudanca no brilho do conjunto, pois o aumento da carga eletrica altera a corrente exigida do gerador. As observacoes qualitativas foram registradas para comparar o comportamento do sistema com diferentes resistencias equivalentes.
+Com a turbina em movimento, o gerador eletrico foi conectado ao banco de lampadas. Em seguida, as chaves das lampadas foram acionadas gradualmente. A cada nova lampada conectada, observou-se a mudanca no brilho do conjunto, pois o aumento da carga elétrica altera a corrente exigida do gerador. As observações qualitativas foram registradas para comparar o comportamento do sistema com diferentes resistências equivalentes.
 
 \subsection{Experimento II: Carga com Reostato}
 
-Na segunda parte do experimento, utilizou-se o circuito com reostato para controlar a carga eletrica aplicada ao gerador. O sistema foi operado primeiro com pressao de vapor de \SI{40}{psi}. Para essa condicao, ajustou-se a carga em 0, 20, 40, 60, 80 e 100 por cento. Em cada ajuste, foram lidas a tensao nos terminais do gerador e a corrente eletrica no circuito.
-
-Depois de completar as medicoes em \SI{40}{psi}, o procedimento foi repetido para a pressao de \SI{50}{psi}. Os mesmos valores de ajuste de carga foram utilizados, permitindo comparar o desempenho eletrico da mini central em duas condicoes de pressao. Com os valores medidos de tensao e corrente, calculou-se a potencia eletrica de saida por meio da relacao \(P = VI\).
+Usando o circuito com reostato, medir a corrente e a tensao em funcao da carga e da pressao. O roteiro solicita medidas em \SI{40}{psi} e \SI{50}{psi}, com ajustes de carga em 0, 20, 40, 60, 80 e 100 por cento.
 
 \section{Resultados}
 
@@ -139,11 +184,12 @@ Depois de completar as medicoes em \SI{40}{psi}, o procedimento foi repetido par
   \label{tab:lamp-observations}
   \begin{tabularx}{\textwidth}{YY}
     \toprule
-    Condicao & Observacao \\
+    Lâmpadas conectadas & Observacao \\
     \midrule
-    Lampadas iniciais ligadas & \blank \\
-    Mais lampadas conectadas & \blank \\
-    Condicao final & \blank \\
+    2 & Brilho intenso \\
+    4 & Brilho médio \\
+    6 & Queda do brilho das 6 lâmpadas \\
+    8 & Queda brusca no brilho \\
     \bottomrule
   \end{tabularx}
 \end{table}
@@ -152,43 +198,25 @@ Depois de completar as medicoes em \SI{40}{psi}, o procedimento foi repetido par
 
 \begin{table}[H]
   \centering
-  \caption{Medidas em \SI{40}{psi}. Calcular a potencia usando \(P=VI\).}
-  \label{tab:40psi}
-  \begin{tabular}{S[table-format=3.0] S[table-format=2.3] S[table-format=3.2] S[table-format=3.2]}
-    \toprule
-    {Carga (\%)} & {Corrente (\si{\ampere})} & {Tensao (\si{\volt})} & {Potencia (\si{\watt})} \\
-    \midrule
-    0   & {} & {} & {} \\
-    20  & {} & {} & {} \\
-    40  & {} & {} & {} \\
-    60  & {} & {} & {} \\
-    80  & {} & {} & {} \\
-    100 & {} & {} & {} \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\begin{table}[H]
-  \centering
-  \caption{Medidas em \SI{50}{psi}. Calcular a potencia usando \(P=VI\).}
+  \caption{Medidas em \SI{50}{psi}.}
   \label{tab:50psi}
   \begin{tabular}{S[table-format=3.0] S[table-format=2.3] S[table-format=3.2] S[table-format=3.2]}
     \toprule
     {Carga (\%)} & {Corrente (\si{\ampere})} & {Tensao (\si{\volt})} & {Potencia (\si{\watt})} \\
     \midrule
-    0   & 0.15 & 9.3  & 1.34 \\
-    20  & 0.20 & 11.1 & 2.22 \\
-    40  & 0.25 & 10.5 & 2.63 \\
-    60  & 0.31 & 9.5  & 2.95 \\
-    80  & 0.50 & 5.5  & 2.75 \\
-    100 & 0.51 & 1.1  & 0.56 \\
+    0   & {0,15} & {9,3} & {1,34} \\
+    20  & {0,20} & {11,1} & {2,22} \\
+    40  & {0,25} & {10,5} & {2,63} \\
+    60  & {0,31} & {9,5} & {2,95} \\
+    80  & {0,50} & {5,5} & {2,75} \\
+    100 & {0,51} & {1,1} & {0,56} \\
     \bottomrule
   \end{tabular}
 \end{table}
 
 \section{Graficos}
 
-Os graficos a seguir foram construidos com as medidas obtidas para a pressao de \SI{50}{psi}.
+Substitua as coordenadas de exemplo abaixo pelos valores medidos. Mantenha as duas pressoes nos mesmos eixos, como solicitado no roteiro.
 
 \subsection{Tensao em Funcao da Potencia Eletrica}
 
@@ -211,10 +239,10 @@ Os graficos a seguir foram construidos com as medidas obtidas para a pressao de 
         (2.75,5.5)
         (2.95,9.5)
       };
-      \addlegendentry{\SI{50}{psi}}
+        \addlegendentry{50 psi}
     \end{axis}
   \end{tikzpicture}
-  \caption{Tensao em funcao da potencia eletrica para pressao de \SI{50}{psi}.}
+  \caption{Tensao em funcao da potencia eletrica para as duas pressoes de vapor.}
   \label{fig:voltage-power}
 \end{figure}
 
@@ -242,7 +270,7 @@ Os graficos a seguir foram construidos com as medidas obtidas para a pressao de 
       \addlegendentry{\SI{50}{psi}}
     \end{axis}
   \end{tikzpicture}
-  \caption{Potencia eletrica em funcao da corrente para pressao de \SI{50}{psi}.}
+  \caption{Potencia eletrica em funcao da corrente para as duas pressoes de vapor.}
   \label{fig:power-current}
 \end{figure}
 
@@ -272,29 +300,34 @@ Os graficos a seguir foram construidos com as medidas obtidas para a pressao de 
       \addlegendentry{\SI{50}{psi}}
     \end{axis}
   \end{tikzpicture}
-  \caption{Potencia eletrica em funcao do ajuste de carga do reostato para pressao de \SI{50}{psi}.}
+  \caption{Potencia eletrica em funcao do ajuste de carga do reostato.}
   \label{fig:power-load}
 \end{figure}
 
-\section{Discussao}
+\section{Discussão}
 
-\subsection{Experimento com Lampadas}
+\subsection{Experimento com Lâmpadas}
 
-No experimento com o banco de lampadas, o brilho variou conforme novas lampadas foram conectadas ao circuito. Isso ocorreu porque a resistencia equivalente do conjunto mudou, alterando a corrente exigida do gerador. Para uma carga resistiva, a potencia eletrica pode ser relacionada com a tensao por \(P = V^2/R\). Assim, quando a resistencia equivalente diminui, a corrente tende a aumentar.
+O brilho das lâmpadas alterou-se significativamente devido à variação da resistência equivalente do circuito. Ao conectar múltiplas lâmpadas em paralelo, a resistência equivalente total diminui, o que eleva a demanda por corrente elétrica. Como o gerador possui limitações físicas e resistência interna, essa alta corrente provoca uma queda de tensão nos terminais do equipamento, resultando em menor potência dissipada individualmente por cada lâmpada. Isso justifica qualitativamente a redução do brilho observada ao acionar 6 lâmpadas e a queda brusca ao acionar 8 lâmpadas.
 
-Entretanto, uma resistencia menor nao significa necessariamente maior potencia real fornecida pelo sistema. Em um caso ideal, a reducao da resistencia poderia aumentar a potencia. Na pratica, o gerador possui limitacoes mecanicas e eletricas. Quando a carga aumenta muito, a turbina pode perder rotacao e a tensao nos terminais pode cair. Por isso, o brilho das lampadas depende nao apenas da resistencia, mas tambem da capacidade do gerador de manter tensao e corrente.
+A relação matemática que rege a potência elétrica dissipada por uma carga puramente resistiva pode ser expressa em função da tensão pela seguinte equação:
+\begin{equation}
+    P = \frac{V^2}{R}
+\end{equation}
+
+Analisando a equação de forma teórica, uma resistência menor resultaria em maior potência apenas em um cenário ideal, onde a fonte mantivesse a tensão perfeitamente constante. Na prática, o gerador da mini central termelétrica possui resistência interna. Quando a resistência da carga externa diminui de forma excessiva, a corrente aumenta substancialmente, acarretando uma elevada queda de tensão interna no gerador. Consequentemente, a tensão útil cai a ponto de reduzir a potência total entregue à carga, evidenciando que uma resistência menor não garante potência maior indefinidamente.
 
 \subsection{Experimento com Reostato}
 
-No ensaio com reostato, os dados obtidos para \SI{50}{psi} mostram que a potencia eletrica aumentou inicialmente com o ajuste de carga. A potencia passou de \SI{1.34}{W}, com carga de 0\%, para o valor maximo de \SI{2.95}{W}, com carga de 60\%. Depois desse ponto, a potencia diminuiu, chegando a \SI{0.56}{W} com carga de 100\%.
+Conforme as medições experimentais registradas, o ponto de operação ótimo do sistema ocorreu com o reostato ajustado para a marca de 60\% de carga. Nessa configuração específica de resistência, houve o casamento de impedâncias que permitiu ao sistema atingir a potência elétrica máxima de 2,95 W.
 
-Esse comportamento indica que existe uma condicao intermediaria de carga em que o sistema opera melhor. Em cargas muito baixas, a corrente e pequena, e por isso a potencia tambem e limitada. Em cargas muito altas, a corrente aumenta, mas a tensao cai de forma significativa. Essa queda de tensao pode ser explicada pelas perdas internas do gerador, pelo maior esforco mecanico exigido da turbina e por possiveis variacoes na pressao e na vazao de vapor.
+A redução contínua da tensão em resposta ao aumento da corrente ocorre devido ao carregamento direto do gerador elétrico. A passagem de correntes mais intensas magnifica as perdas internas por efeito Joule e acentua a queda de tensão nos próprios enrolamentos do gerador, diminuindo progressivamente a diferença de potencial efetivamente disponível nos terminais de saída.
 
-As incertezas experimentais tambem influenciam os resultados. Entre as principais fontes de erro estao a leitura dos instrumentos analogicos ou digitais, a estabilidade da pressao de vapor, a variacao da rotacao da turbina e o ajuste manual do reostato. Mesmo assim, os dados permitem observar claramente a relacao entre carga, tensao, corrente e potencia eletrica.
+Por fim, os dados colhidos estão sujeitos a incertezas experimentais inerentes à montagem de bancada. As principais fontes de desvio englobam a incerteza de leitura e oscilação dos ponteiros nos medidores analógicos do painel, as variações na manutenção térmica que dificultam manter a pressão da caldeira perfeitamente estável e as consequentes flutuações na rotação da turbina durante as aferições.
 
-\section{Conclusao}
+\section{Conclusão}
 
-O experimento permitiu observar o funcionamento de uma mini central termeletrica, na qual a energia termica do vapor foi convertida em energia mecanica na turbina e, em seguida, em energia eletrica no gerador. No ensaio com reostato a \SI{50}{psi}, a maior potencia eletrica medida foi de \SI{2.95}{W}, obtida com ajuste de carga de 60\%. Para cargas maiores, a potencia diminuiu devido a queda da tensao nos terminais do gerador. Esse resultado mostra que o desempenho do sistema depende do equilibrio entre tensao e corrente, e nao apenas do aumento da carga eletrica. A atividade tambem evidenciou a importancia de controlar a pressao de vapor, a rotacao da turbina e as condicoes de medicao para obter resultados mais consistentes.
+A prática laboratorial evidenciou a cadeia de transformações energéticas inerentes a uma central termelétrica, validando a conversão progressiva de energia térmica em mecânica e, posteriormente, em elétrica. O aumento da pressão na caldeira converteu-se em maior energia cinética no jato, transferindo mais torque ao eixo da turbina e elevando a capacidade de geração do sistema. O resultado principal das medições apontou que o ponto de operação ótimo ocorreu sob a pressão de 50 psi combinada a um ajuste de carga de 60\% no reostato. Essa configuração específica permitiu extrair a potência elétrica máxima de 2,95 W do gerador. Os dados ratificam que a máxima transferência de potência exige um ajuste preciso da resistência equivalente da carga, pois o rendimento global cai drasticamente devido às quedas de tensão internas quando o circuito elétrico se afasta dessa condição ideal de operação.
 
 \section*{Referencias}
 
