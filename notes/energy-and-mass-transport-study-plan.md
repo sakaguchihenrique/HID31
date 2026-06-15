@@ -6,7 +6,9 @@ Course context: HID-31 Transport Phenomena.
 
 This plan uses Bird, Stewart, and Lightfoot's *Transport Phenomena* as the main reference for studying energy transport and mass transport. The goal is not to read the 850 pages from beginning to end. The goal is to turn the book into a smaller learning path with clear notes, examples, formulas, and review material.
 
-> Note: I could confirm that the PDF exists in `materials/`, but direct text extraction tools are not currently available in this workspace. The chapter map below follows the standard structure of Bird's *Transport Phenomena*. A detailed page map should be added after reliable PDF text extraction is available.
+Extracted source map: [`notes/bird-transport-phenomena-source-map.md`](bird-transport-phenomena-source-map.md).
+
+> Note: the Bird PDF has an extractable text layer. Use the source map to locate chapters and page ranges, then write your own short explanations instead of copying long textbook passages.
 
 ## Study Goal
 
@@ -305,16 +307,14 @@ Recommended next files:
 3. `notes/mass-transport-ficks-law.md`
 4. `reviews/energy-and-mass-transport-review.md`
 
-## PDF Extraction Follow-Up
+## Source Map Follow-Up
 
-To make this plan more precise, we should later add:
+The PDF source map is now available in [`notes/bird-transport-phenomena-source-map.md`](bird-transport-phenomena-source-map.md). To make this plan more precise, we should later add:
 
-- exact PDF pages for each chapter;
 - exact section titles in Portuguese or English, depending on the edition;
 - selected figures from the textbook, saved in `notes/images/`;
 - references beside each note section.
 
-Best next technical step:
+Best next study step:
 
-- use a PDF text extraction tool or Python PDF library to create a chapter/page index.
-
+- create `notes/transport-phenomena-core-ideas.md` using the source map and the teacher syllabus.

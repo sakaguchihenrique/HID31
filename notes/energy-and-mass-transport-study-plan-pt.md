@@ -6,7 +6,9 @@ Contexto da disciplina: HID-31 Fenomenos de Transporte.
 
 Este plano usa o livro *Transport Phenomena*, de Bird, Stewart e Lightfoot, como referencia principal para estudar transporte de energia e transporte de massa. A ideia nao e ler as 850 paginas do inicio ao fim. A ideia e transformar o livro em um caminho menor de estudo, com notas claras, exemplos, formulas e material de revisao.
 
-> Observacao: eu consegui confirmar que o PDF existe em `materials/`, mas as ferramentas de extracao direta de texto de PDF ainda nao estao disponiveis neste workspace. O mapa de capitulos abaixo segue a estrutura padrao do livro *Transport Phenomena*, de Bird. Um mapa detalhado de paginas deve ser adicionado depois que tivermos uma forma confiavel de extrair o texto do PDF.
+Mapa extraido da fonte: [`notes/bird-transport-phenomena-source-map.md`](bird-transport-phenomena-source-map.md).
+
+> Observacao: o PDF do Bird tem uma camada de texto extraivel. Use o mapa da fonte para localizar capitulos e paginas, depois escreva explicacoes curtas com suas proprias palavras em vez de copiar trechos longos do livro.
 
 ## Objetivo de Estudo
 
@@ -305,16 +307,14 @@ Proximos arquivos recomendados:
 3. `notes/mass-transport-ficks-law.md`
 4. `reviews/energy-and-mass-transport-review.md`
 
-## Proximo Passo Para Extracao do PDF
+## Proximo Passo Com o Mapa da Fonte
 
-Para deixar este plano mais preciso, depois devemos adicionar:
+O mapa extraido do PDF esta pronto em [`notes/bird-transport-phenomena-source-map.md`](bird-transport-phenomena-source-map.md). Para deixar este plano mais preciso, depois devemos adicionar:
 
-- paginas exatas do PDF para cada capitulo;
 - titulos exatos das secoes em portugues ou ingles, dependendo da edicao;
 - figuras selecionadas do livro, salvas em `notes/images/`;
 - referencias ao lado de cada secao das notas.
 
-Melhor proximo passo tecnico:
+Melhor proximo passo de estudo:
 
-- usar uma ferramenta de extracao de texto de PDF ou uma biblioteca Python de PDF para criar um indice de capitulos e paginas.
-
+- criar `notes/transport-phenomena-core-ideas.md` usando o mapa da fonte e a ementa do professor.
